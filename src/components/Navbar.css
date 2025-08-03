@@ -1,0 +1,78 @@
+.navbar-luxury {
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(106, 13, 173, 0.2);
+}
+
+.navbar-luxury.scrolled {
+  background: rgba(15, 15, 15, 0.98);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.brand-luxury {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.navbar-luxury .navbar-nav .nav-link {
+  color: var(--platinum-silver) !important;
+  font-weight: 500;
+  margin: 0 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-luxury .navbar-nav .nav-link:hover {
+  color: var(--rich-gold) !important;
+  transform: translateY(-2px);
+}
+
+.navbar-luxury .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--royal-purple), var(--rich-gold));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-luxury .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-toggler-luxury {
+  border: none;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.navbar-toggler-luxury:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-luxury:hover {
+  color: var(--rich-gold);
+}
+
+@media (max-width: 991px) {
+  .navbar-luxury .navbar-nav {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .navbar-luxury .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+  
+  .navbar-luxury .btn-luxury {
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
+} 

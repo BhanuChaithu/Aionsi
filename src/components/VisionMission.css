@@ -1,0 +1,223 @@
+.vision-mission {
+  background: var(--white);
+  position: relative;
+}
+
+.vision-mission::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(106, 13, 173, 0.02), rgba(255, 215, 0, 0.02));
+  z-index: 0;
+}
+
+.vision-mission .container {
+  position: relative;
+  z-index: 1;
+}
+
+.pillar-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(106, 13, 173, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, var(--royal-purple), var(--rich-gold));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(106, 13, 173, 0.2);
+  border-color: var(--royal-purple);
+}
+
+.pillar-card:hover::before {
+  transform: scaleX(1);
+}
+
+.pillar-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--royal-purple), var(--deep-black));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover .pillar-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, var(--rich-gold), var(--royal-purple));
+}
+
+.pillar-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.pillar-description {
+  color: var(--jet-grey);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.pillar-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pillar-details li {
+  padding: 0.5rem 0;
+  color: var(--jet-grey);
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.pillar-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--royal-purple);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.vision-statement {
+  background: linear-gradient(135deg, var(--deep-black), var(--jet-grey));
+  color: var(--white);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-statement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(106, 13, 173, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.vision-statement > * {
+  position: relative;
+  z-index: 1;
+}
+
+.vision-statement h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.vision-text {
+  font-size: 1.2rem;
+  color: var(--platinum-silver);
+  line-height: 1.8;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pillar-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .pillar-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+  
+  .pillar-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .vision-statement {
+    padding: 2rem 1.5rem;
+  }
+  
+  .vision-statement h3 {
+    font-size: 1.5rem;
+  }
+  
+  .vision-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pillar-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .pillar-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .pillar-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .pillar-description {
+    font-size: 0.9rem;
+  }
+  
+  .pillar-details li {
+    font-size: 0.8rem;
+  }
+  
+  .vision-statement {
+    padding: 1.5rem 1rem;
+  }
+  
+  .vision-statement h3 {
+    font-size: 1.3rem;
+  }
+  
+  .vision-text {
+    font-size: 1rem;
+  }
+} 

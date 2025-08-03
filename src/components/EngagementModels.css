@@ -1,0 +1,233 @@
+.engagement-models {
+  background: var(--light-grey);
+  position: relative;
+}
+
+.engagement-models::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(106, 13, 173, 0.02), rgba(255, 215, 0, 0.02));
+  z-index: 0;
+}
+
+.engagement-models .container {
+  position: relative;
+  z-index: 1;
+}
+
+.engagement-nav {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.engagement-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  color: var(--jet-grey);
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
+}
+
+.engagement-nav-link:hover {
+  background: rgba(106, 13, 173, 0.1);
+  color: var(--royal-purple);
+  transform: translateX(5px);
+}
+
+.engagement-nav-link.active {
+  background: linear-gradient(135deg, var(--royal-purple), var(--deep-black));
+  color: var(--white);
+  box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  width: 30px;
+  text-align: center;
+}
+
+.model-content {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+.model-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(106, 13, 173, 0.1);
+}
+
+.model-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--royal-purple), var(--rich-gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.model-header h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.model-description {
+  color: var(--jet-grey);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.features-section,
+.benefits-section {
+  background: rgba(106, 13, 173, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(106, 13, 173, 0.1);
+}
+
+.features-section h4,
+.benefits-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.feature-list,
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li,
+.benefit-list li {
+  padding: 0.5rem 0;
+  color: var(--jet-grey);
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--royal-purple);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.benefit-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: var(--rich-gold);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.model-cta {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(106, 13, 173, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .engagement-nav {
+    margin-bottom: 2rem;
+  }
+  
+  .engagement-nav-link {
+    padding: 0.8rem 1rem;
+  }
+  
+  .model-content {
+    padding: 1.5rem;
+  }
+  
+  .model-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .model-icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .engagement-nav-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+    width: 25px;
+  }
+  
+  .model-content {
+    padding: 1rem;
+  }
+  
+  .model-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .features-section,
+  .benefits-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-list li,
+  .benefit-list li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .engagement-nav-link {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .model-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .model-header h3 {
+    font-size: 1.3rem;
+  }
+} 

@@ -1,0 +1,309 @@
+.case-studies {
+  background: var(--white);
+  position: relative;
+}
+
+.case-studies::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(106, 13, 173, 0.02), rgba(255, 215, 0, 0.02));
+  z-index: 0;
+}
+
+.case-studies .container {
+  position: relative;
+  z-index: 1;
+}
+
+.case-study-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  background: var(--white);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.case-study-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, var(--royal-purple), var(--rich-gold));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(106, 13, 173, 0.2);
+}
+
+.case-study-card:hover::before {
+  transform: scaleX(1);
+}
+
+.case-study-card .card-body {
+  padding: 2rem;
+}
+
+.case-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--royal-purple), var(--deep-black));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.case-study-card:hover .case-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, var(--rich-gold), var(--royal-purple));
+}
+
+.case-category {
+  display: inline-block;
+  background: rgba(106, 13, 173, 0.1);
+  color: var(--royal-purple);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.case-study-card .card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.case-study-card .card-text {
+  color: var(--jet-grey);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.case-read-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--royal-purple);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.case-study-card:hover .case-read-more {
+  color: var(--rich-gold);
+  transform: translateX(5px);
+}
+
+.case-studies-cta {
+  background: linear-gradient(135deg, var(--deep-black), var(--jet-grey));
+  color: var(--white);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.case-studies-cta h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.case-studies-cta p {
+  font-size: 1.1rem;
+  color: var(--platinum-silver);
+  margin-bottom: 2rem;
+}
+
+/* Modal Styles */
+.case-study-modal .modal-content {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.case-study-modal .modal-header {
+  border-bottom: 2px solid rgba(106, 13, 173, 0.1);
+  padding: 2rem 2rem 1rem;
+}
+
+.case-study-modal .modal-title {
+  width: 100%;
+}
+
+.modal-title-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--royal-purple), var(--rich-gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.modal-title-content h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 0.3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.modal-category {
+  display: inline-block;
+  background: rgba(106, 13, 173, 0.1);
+  color: var(--royal-purple);
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.case-study-modal .modal-body {
+  padding: 2rem;
+}
+
+.modal-description {
+  color: var(--jet-grey);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-list li {
+  padding: 0.5rem 0;
+  color: var(--jet-grey);
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.modal-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--royal-purple);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.case-study-modal .modal-footer {
+  border-top: 2px solid rgba(106, 13, 173, 0.1);
+  padding: 1rem 2rem 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .case-study-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .case-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .case-study-card .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .case-studies-cta {
+    padding: 2rem 1.5rem;
+  }
+  
+  .case-studies-cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .case-study-modal .modal-header,
+  .case-study-modal .modal-body,
+  .case-study-modal .modal-footer {
+    padding: 1.5rem;
+  }
+  
+  .modal-title-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .modal-icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .case-study-card .card-body {
+    padding: 1rem;
+  }
+  
+  .case-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .case-study-card .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .case-studies-cta {
+    padding: 1.5rem 1rem;
+  }
+  
+  .case-studies-cta h3 {
+    font-size: 1.3rem;
+  }
+  
+  .case-studies-cta p {
+    font-size: 1rem;
+  }
+} 
