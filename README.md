@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AIONSI - Your Trusted IC Design Partner
 
 A fully responsive, professional, and luxurious website for AIONSI, a semiconductor and embedded systems company. Built with ReactJS, Bootstrap, and modern web technologies.
@@ -153,3 +154,7 @@ For support or questions about the AIONSI website, please contact:
 ---
 
 **AIONSI** - Accelerating semiconductor innovation with expert VLSI & Embedded design services. 
+=======
+# Aionsi
+Aionsi
+>>>>>>> db4d280d5f39c4b51115095e82dcdf53b68535f9
